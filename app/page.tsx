@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { Check } from "lucide-react";
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -27,7 +26,7 @@ export default function Home() {
           </div>
         </nav>
       </header>
-      <section className="container mx-auto text-center my-20">
+      <section className="container mx-auto text-center py-20">
         <h1 className="text-6xl font-bold">Simplifique seus estudos</h1>
         <p className="text-gray-600 mt-6 text-xl max-w-3xl mx-auto">
           Deixe que nós façamos a curadoria para você. Assine nossa plataforma e
@@ -69,27 +68,44 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="container mx-auto text-center my-20">
-        <h2 className="text-4xl font-bold">Preço Simples e Transparente</h2>
+      <section className="container mx-auto text-center py-20">
+        <h2 className="text-4xl font-bold">Preços Simples e Transparentes</h2>
         <p className="text-gray-600 mt-6 text-xl max-w-3xl mx-auto">
-          Pra que inúmeros planos quando nós sabemos exatamente o que é melhor
-          para você? Assine o nosso plano mensal Pro Premium VIP e garanta
-          mensalmente um ebook novo de programação. E por menos de um café por
-          dia.
+          Planos que respeitam o seu momento atual. Escolha o que melhor se
+          encaixa para você.
         </p>
         <div className="flex justify-center items-center mt-14 gap-8">
           <Card className="w-full max-w-sm text-left inset-shadow-sm hover:bg-amber-50 transition-all duration-500 hover:scale-105">
             <CardHeader>
               <CardTitle>Plano Basic</CardTitle>
-              <CardDescription>O básico para começar os seus estudos</CardDescription>
+              <CardDescription>
+                O básico para começar os seus estudos
+              </CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-4xl font-bold">R$ 9,90<span className="font-normal text-muted-foreground text-lg">/mês</span></p>
+              <p className="text-4xl font-bold">
+                R$ 9,90
+                <span className="font-normal text-muted-foreground text-lg">
+                  /mês
+                </span>
+              </p>
               <ul className="my-6">
-                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> 1 ebook novo por mês</li>
-                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Curadoria especializada</li>
-                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Acesso imediato ao conteúdo</li>
-                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Cancelamento fácil a qualquer momento</li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground">
+                  <Check className="text-green-500" size={20} /> 1 ebook novo
+                  por mês
+                </li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground">
+                  <Check className="text-green-500" size={20} /> Curadoria
+                  especializada
+                </li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground">
+                  <Check className="text-green-500" size={20} /> Acesso imediato
+                  ao conteúdo
+                </li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground">
+                  <Check className="text-green-500" size={20} /> Cancelamento
+                  fácil a qualquer momento
+                </li>
               </ul>
             </CardContent>
             <CardFooter>
@@ -98,16 +114,40 @@ export default function Home() {
           </Card>
           <Card className="w-full max-w-md text-left shadow-2xl shadow-amber-200 hover:bg-amber-100 hover:scale-110 transition-all duration-700">
             <CardHeader>
-              <CardTitle className="flex justify-between items-center">Plano Pro Premium VIP <span className="rounded-sm bg-emerald-400 text-white p-1">Mais recomendado</span></CardTitle>
-              <CardDescription>Tudo que você precisa para os seus estudos</CardDescription>
+              <CardTitle className="flex justify-between items-center">
+                Plano Pro Premium VIP{" "}
+                <span className="rounded-sm bg-emerald-400 text-white p-1">
+                  Mais recomendado
+                </span>
+              </CardTitle>
+              <CardDescription>
+                Tudo que você precisa para os seus estudos
+              </CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-4xl font-bold">R$ 19,90<span className="font-normal text-muted-foreground text-lg">/mês</span></p>
+              <p className="text-4xl font-bold">
+                R$ 19,90
+                <span className="font-normal text-muted-foreground text-lg">
+                  /mês
+                </span>
+              </p>
               <ul className="my-6">
-                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> 1 ebook novo por mês</li>
-                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Curadoria especializada</li>
-                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Acesso imediato ao conteúdo</li>
-                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Cancelamento fácil a qualquer momento</li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground">
+                  <Check className="text-green-500" size={20} /> 1 ebook novo
+                  por mês
+                </li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground">
+                  <Check className="text-green-500" size={20} /> Curadoria
+                  especializada
+                </li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground">
+                  <Check className="text-green-500" size={20} /> Acesso imediato
+                  ao conteúdo
+                </li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground">
+                  <Check className="text-green-500" size={20} /> Cancelamento
+                  fácil a qualquer momento
+                </li>
               </ul>
             </CardContent>
             <CardFooter>
@@ -117,15 +157,34 @@ export default function Home() {
           <Card className="w-full max-w-sm text-left inset-shadow-sm hover:bg-amber-50 transition-all duration-500 hover:scale-105">
             <CardHeader>
               <CardTitle>Plano Enterprise</CardTitle>
-              <CardDescription>Tudo que o seu time precisa para os estudos</CardDescription>
+              <CardDescription>
+                Tudo que o seu time precisa para os estudos
+              </CardDescription>
             </CardHeader>
             <CardContent>
-              <p className="text-4xl font-bold">R$ 109,90<span className="font-normal text-muted-foreground text-lg">/mês</span></p>
+              <p className="text-4xl font-bold">
+                R$ 109,90
+                <span className="font-normal text-muted-foreground text-lg">
+                  /mês
+                </span>
+              </p>
               <ul className="my-6">
-                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> 1 ebook novo por mês</li>
-                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Curadoria especializada</li>
-                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Acesso imediato ao conteúdo</li>
-                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Cancelamento fácil a qualquer momento</li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground">
+                  <Check className="text-green-500" size={20} /> 1 ebook novo
+                  por mês
+                </li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground">
+                  <Check className="text-green-500" size={20} /> Curadoria
+                  especializada
+                </li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground">
+                  <Check className="text-green-500" size={20} /> Acesso imediato
+                  ao conteúdo
+                </li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground">
+                  <Check className="text-green-500" size={20} /> Cancelamento
+                  fácil a qualquer momento
+                </li>
               </ul>
             </CardContent>
             <CardFooter>
@@ -134,18 +193,24 @@ export default function Home() {
           </Card>
         </div>
       </section>
-      <section className="bg-white">
-        <h2>Pronto Para Mudar a Sua Vida?</h2>
-        <p>
-          Faça como milhares de outras pessoas. Assine nosso produto e tenha
-          garantido seus estudos
-        </p>
-        <button>Assine agora</button>
-        <p>Comece sua assinatura agora mesmo. Cancele quando quiser.</p>
+      <section className="bg-white py-20">
+        <div className="container mx-auto text-center">
+          <h2 className="text-5xl font-bold">Pronto Para Mudar a Sua Vida?</h2>
+          <p className="text-gray-600 mt-6 text-md max-w-md mx-auto">
+            Faça como milhares de outras pessoas. Assine nosso produto e tenha
+            garantido seus estudos
+          </p>
+          <Button className="w-full max-w-sm mt-10">Assine agora</Button>
+          <p className="text-muted-foreground mt-4 text-xs">
+            Comece sua assinatura agora mesmo. Cancele quando quiser.
+          </p>
+        </div>
       </section>
-      <footer>
-        {/* <img src="" alt="" /> */}
-        <p>© 2024 LivroSaaS. Todos os direitos reservados.</p>
+      <footer className="container mx-auto flex justify-around items-center">
+        <Image src={logoImg} alt="Logo LivroSaaS" />
+        <p className="text-muted-foreground">
+          © 2025 LivroSaaS. Todos os direitos reservados.
+        </p>
       </footer>
     </main>
   );
