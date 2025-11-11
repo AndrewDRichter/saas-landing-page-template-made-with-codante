@@ -19,16 +19,18 @@ export default function Home() {
       <header className="container mx-auto">
         <nav className="flex justify-between items-center p-4">
           <Image src={logoImg} alt="Logo LivroSaaS" />
-          <div className="flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4">
             <Button variant={"link"}>About</Button>
             <Button variant={"link"}>Prices</Button>
             <Button variant={"outline"}>Login</Button>
           </div>
         </nav>
       </header>
-      <section className="container mx-auto text-center py-20">
-        <h1 className="text-6xl font-bold">Simplifique seus estudos</h1>
-        <p className="text-gray-600 mt-6 text-xl max-w-3xl mx-auto">
+      <section className="container mx-auto text-center py-10 md:py-20">
+        <h1 className="text-4xl md:text-6xl font-bold">
+          Simplifique seus estudos
+        </h1>
+        <p className="text-gray-600 mt-6 text-sm md:text-xl md:max-w-3xl mx-auto">
           Deixe que nós façamos a curadoria para você. Assine nossa plataforma e
           receba todos os meses um ebook novo de programação.
         </p>
