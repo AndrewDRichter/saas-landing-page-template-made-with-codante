@@ -4,6 +4,15 @@ import womanImg from "@/public/woman.svg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Check } from "lucide-react";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function Home() {
   return (
@@ -29,7 +38,7 @@ export default function Home() {
             <Input
               placeholder="Coloque seu email"
               type="email"
-              className="max-w-sm border-gray-400"
+              className="max-w-sm border-gray-400 md:text-lg"
             />
             <Button>Assine agora</Button>
           </div>
@@ -60,25 +69,69 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
-        <h2>Preço Simples e Transparente</h2>
-        <p>
+      <section className="container mx-auto text-center my-20">
+        <h2 className="text-4xl font-bold">Preço Simples e Transparente</h2>
+        <p className="text-gray-600 mt-6 text-xl max-w-3xl mx-auto">
           Pra que inúmeros planos quando nós sabemos exatamente o que é melhor
           para você? Assine o nosso plano mensal Pro Premium VIP e garanta
           mensalmente um ebook novo de programação. E por menos de um café por
           dia.
         </p>
-        <div>
-          <h3>Plano Pro Premium VIP</h3>
-          <p>Tudo que você precisa para os seus estudos</p>
-          <span>R$ 29,90/mês</span>
-          <ul>
-            <li>1 ebook novo por mês</li>
-            <li>Curadoria especializada</li>
-            <li>Acesso imediato ao conteúdo</li>
-            <li>Cancelamento fácil a qualquer momento</li>
-          </ul>
-          <button>Assine Agora</button>
+        <div className="flex justify-center items-center mt-14 gap-8">
+          <Card className="w-full max-w-sm text-left inset-shadow-sm hover:bg-amber-50 transition-all duration-500 hover:scale-105">
+            <CardHeader>
+              <CardTitle>Plano Basic</CardTitle>
+              <CardDescription>O básico para começar os seus estudos</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-4xl font-bold">R$ 9,90<span className="font-normal text-muted-foreground text-lg">/mês</span></p>
+              <ul className="my-6">
+                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> 1 ebook novo por mês</li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Curadoria especializada</li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Acesso imediato ao conteúdo</li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Cancelamento fácil a qualquer momento</li>
+              </ul>
+            </CardContent>
+            <CardFooter>
+              <Button className="w-full">Assine Agora</Button>
+            </CardFooter>
+          </Card>
+          <Card className="w-full max-w-md text-left shadow-2xl shadow-amber-200 hover:bg-amber-100 hover:scale-110 transition-all duration-700">
+            <CardHeader>
+              <CardTitle className="flex justify-between items-center">Plano Pro Premium VIP <span className="rounded-sm bg-emerald-400 text-white p-1">Mais recomendado</span></CardTitle>
+              <CardDescription>Tudo que você precisa para os seus estudos</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-4xl font-bold">R$ 19,90<span className="font-normal text-muted-foreground text-lg">/mês</span></p>
+              <ul className="my-6">
+                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> 1 ebook novo por mês</li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Curadoria especializada</li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Acesso imediato ao conteúdo</li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Cancelamento fácil a qualquer momento</li>
+              </ul>
+            </CardContent>
+            <CardFooter>
+              <Button className="w-full">Assine Agora</Button>
+            </CardFooter>
+          </Card>
+          <Card className="w-full max-w-sm text-left inset-shadow-sm hover:bg-amber-50 transition-all duration-500 hover:scale-105">
+            <CardHeader>
+              <CardTitle>Plano Enterprise</CardTitle>
+              <CardDescription>Tudo que o seu time precisa para os estudos</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <p className="text-4xl font-bold">R$ 109,90<span className="font-normal text-muted-foreground text-lg">/mês</span></p>
+              <ul className="my-6">
+                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> 1 ebook novo por mês</li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Curadoria especializada</li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Acesso imediato ao conteúdo</li>
+                <li className="flex justify-start gap-4 items-center text-muted-foreground"><Check className="text-green-500" size={20} /> Cancelamento fácil a qualquer momento</li>
+              </ul>
+            </CardContent>
+            <CardFooter>
+              <Button className="w-full">Assine Agora</Button>
+            </CardFooter>
+          </Card>
         </div>
       </section>
       <section className="bg-white">
