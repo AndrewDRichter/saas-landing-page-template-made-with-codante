@@ -3,7 +3,7 @@ import logoImg from "@/public/logo.svg";
 import womanImg from "@/public/woman.svg";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Check } from "lucide-react";
+import { Check, MenuIcon } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -19,6 +19,7 @@ export default function Home() {
       <header className="container mx-auto">
         <nav className="flex justify-between items-center p-4">
           <Image src={logoImg} alt="Logo LivroSaaS" />
+          <MenuIcon className="md:hidden" />
           <div className="hidden md:flex items-center gap-4">
             <Button variant={"link"}>About</Button>
             <Button variant={"link"}>Prices</Button>
@@ -26,34 +27,40 @@ export default function Home() {
           </div>
         </nav>
       </header>
-      <section className="container mx-auto text-center py-10 md:py-20">
-        <h1 className="text-4xl md:text-6xl font-bold">
+      <section className="container mx-auto text-center py-8 md:py-20 px-2 md:px-0">
+        <h1 className="text-2xl md:text-6xl font-bold">
           Simplifique seus estudos
         </h1>
         <p className="text-gray-600 mt-6 text-sm md:text-xl md:max-w-3xl mx-auto">
           Deixe que nós façamos a curadoria para você. Assine nossa plataforma e
           receba todos os meses um ebook novo de programação.
         </p>
-        <form className="mt-20">
-          <div className="flex gap-2 justify-center">
+        <form className="mt-10 md:mt-20">
+          <div className="flex flex-wrap gap-2 justify-center">
             <Input
               placeholder="Coloque seu email"
               type="email"
-              className="max-w-sm border-gray-400 md:text-lg"
+              className="max-w-sm border-gray-400 md:text-lg shadow-xl"
             />
-            <Button>Assine agora</Button>
+            <Button className="w-full md:w-fit">Assine agora</Button>
           </div>
           <p className="text-xs text-muted-foreground mt-2">
             Comece sua assinatura agora mesmo. Cancele quando quiser.
           </p>
         </form>
       </section>
-      <section className="bg-white py-14">
+      <section className="bg-white py-6 md:py-14">
         <div className="container mx-auto">
-          <h2 className="text-4xl font-bold text-center">Como funciona?</h2>
-          <div className="flex items-center justify-between max-w-3xl mx-auto">
-            <Image src={womanImg} alt="Mulher carregando caixas de livros" />
-            <ul className="text-2xl text-muted-foreground space-y-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-center">
+            Como funciona?
+          </h2>
+          <div className="flex flex-wrap items-center gap-4 justify-center md:justify-between max-w-3xl mx-auto">
+            <Image
+              src={womanImg}
+              alt="Mulher carregando caixas de livros"
+              className="w-50 md:w-fit"
+            />
+            <ul className="text-lg md:text-2xl text-muted-foreground space-y-2 md:space-y-6">
               <li className="flex justify-end items-center gap-6">
                 Acesso a 1 ebook por mês{" "}
                 <Check size={24} className="text-green-500" />
@@ -70,13 +77,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="container mx-auto text-center py-20">
-        <h2 className="text-4xl font-bold">Preços Simples e Transparentes</h2>
-        <p className="text-gray-600 mt-6 text-xl max-w-3xl mx-auto">
+      <section className="container mx-auto text-center py-8 md:py-20">
+        <h2 className="text-2xl md:text-4xl font-bold">
+          Preços Simples e Transparentes
+        </h2>
+        <p className="text-gray-600 mt-6 text-lg md:text-xl max-w-3xl mx-auto">
           Planos que respeitam o seu momento atual. Escolha o que melhor se
           encaixa para você.
         </p>
-        <div className="flex justify-center items-center mt-14 gap-8">
+        <div className="flex flex-wrap justify-center px-4 md:px-0 items-center mt-14 gap-8">
           <Card className="w-full max-w-sm text-left inset-shadow-sm hover:bg-amber-50 transition-all duration-500 hover:scale-105">
             <CardHeader>
               <CardTitle>Plano Basic</CardTitle>
@@ -118,7 +127,7 @@ export default function Home() {
             <CardHeader>
               <CardTitle className="flex justify-between items-center">
                 Plano Pro Premium VIP{" "}
-                <span className="rounded-sm bg-emerald-400 text-white p-1">
+                <span className="text-center rounded-sm bg-emerald-400 text-white p-1">
                   Mais recomendado
                 </span>
               </CardTitle>
@@ -195,22 +204,26 @@ export default function Home() {
           </Card>
         </div>
       </section>
-      <section className="bg-white py-20">
+      <section className="bg-white py-10 md:py-20">
         <div className="container mx-auto text-center">
-          <h2 className="text-5xl font-bold">Pronto Para Mudar a Sua Vida?</h2>
-          <p className="text-gray-600 mt-6 text-md max-w-md mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold">
+            Pronto Para Mudar a Sua Vida?
+          </h2>
+          <p className="text-gray-600 mt-6 text-md max-w-xs md:max-w-md mx-auto">
             Faça como milhares de outras pessoas. Assine nosso produto e tenha
             garantido seus estudos
           </p>
-          <Button className="w-full max-w-sm mt-10">Assine agora</Button>
+          <Button className="w-40 md:w-full max-w-sm mt-6 md:mt-10">
+            Assine agora
+          </Button>
           <p className="text-muted-foreground mt-4 text-xs">
             Comece sua assinatura agora mesmo. Cancele quando quiser.
           </p>
         </div>
       </section>
-      <footer className="container mx-auto flex justify-around items-center">
+      <footer className="container mx-auto flex flex-col md:flex-row justify-around items-center">
         <Image src={logoImg} alt="Logo LivroSaaS" />
-        <p className="text-muted-foreground">
+        <p className="text-sm text-muted-foreground">
           © 2025 LivroSaaS. Todos os direitos reservados.
         </p>
       </footer>
