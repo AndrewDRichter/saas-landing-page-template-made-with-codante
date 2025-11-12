@@ -12,16 +12,47 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
-      <header className="container mx-auto">
-        <nav className="flex justify-between items-center p-4">
-          <Image src={logoImg} alt="Logo LivroSaaS" />
-          <MenuIcon className="md:hidden" />
+    <main className="scroll-smooth">
+      <header className="container mx-auto flex justify-between items-center px-4 md:px-10">
+        <Image src={logoImg} alt="Logo LivroSaaS" />
+        <nav className="flex items-center p-4">
+          <Sheet>
+            <SheetTrigger asChild>
+              <MenuIcon className="md:hidden" />
+            </SheetTrigger>
+            <div className="md:hidden">
+              <SheetTitle></SheetTitle>
+              <SheetContent>
+                <nav className="flex flex-col gap-2 px-4 my-4">
+                  <Button variant={"link"}>
+                    <Link href="#about" scroll={true}>
+                      About
+                    </Link>
+                  </Button>
+                  <Button variant={"link"}>
+                    <Link href="#prices">Prices</Link>
+                  </Button>
+                  <Button variant={"default"}>Login</Button>
+                </nav>
+              </SheetContent>
+            </div>
+          </Sheet>
           <div className="hidden md:flex items-center gap-4">
-            <Button variant={"link"}>About</Button>
+            <Button variant={"link"}>
+              <Link href="#about">About</Link>
+            </Button>
             <Button variant={"link"}>Prices</Button>
             <Button variant={"outline"}>Login</Button>
           </div>
@@ -49,7 +80,7 @@ export default function Home() {
           </p>
         </form>
       </section>
-      <section className="bg-white py-6 md:py-14">
+      <section className="bg-white py-6 md:py-14" id="about">
         <div className="container mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-center">
             Como funciona?
