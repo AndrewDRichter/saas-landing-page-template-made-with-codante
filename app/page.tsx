@@ -255,7 +255,13 @@ export default function Home() {
       <footer className="container mx-auto flex flex-col md:flex-row justify-around items-center">
         <Image src={logoImg} alt="Logo LivroSaaS" />
         <p className="text-sm text-muted-foreground">
-          © 2025 LivroSaaS. Todos os direitos reservados.
+          © 2025 LivroSaaS. Todos os direitos reservados. Desenvolvido por{" "}
+          <Button className="p-0" variant={"link"}>
+            <Link href={"https://github.com/AndrewDRichter"}>
+              Andrew Richter
+            </Link>
+          </Button>
+          .
         </p>
       </footer>
     </main>
