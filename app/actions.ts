@@ -9,7 +9,7 @@ type Result = {
 export async function salvarLead(
     prevState: Result,
     formData: FormData
-): Promise<Result | null> {
+): Promise<Result> {
     const email = formData.get("email") as string;
 
     if (!email) {
