@@ -18,6 +18,12 @@ export async function salvarLead(
 
     const { error } = await supabase.from('leads').insert([{ email }]);
 
+    console.log('Supabase insert result:', { error });
+
+    if (error?.code === '23505') {
+        return { ok: false, message: "Email já cadastrado" };
+    }
+
     if (error) {
         return { ok: false, message: "Erro Supabase: " + error.message };
     }

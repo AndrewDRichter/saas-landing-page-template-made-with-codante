@@ -2,7 +2,6 @@ import Image from "next/image";
 import logoImg from "@/public/logo.svg";
 import womanImg from "@/public/woman.svg";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Check, MenuIcon } from "lucide-react";
 import {
   Card,
@@ -21,7 +20,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
-import { salvarLead } from "./actions";
 import { LeadForm } from "./components/LeadForm";
 
 export default function Home() {
@@ -39,24 +37,24 @@ export default function Home() {
               <SheetContent>
                 <nav className="flex flex-col gap-2 px-4 my-4">
                   <Button variant={"link"}>
-                    <Link href="#about" scroll={true}>
-                      About
-                    </Link>
+                    <Link href="#about">Sobre</Link>
                   </Button>
                   <Button variant={"link"}>
-                    <Link href="#prices">Prices</Link>
+                    <Link href="#prices">Planos</Link>
                   </Button>
-                  <Button variant={"default"}>Login</Button>
+                  {/* <Button variant={"default"}>Login</Button> */}
                 </nav>
               </SheetContent>
             </div>
           </Sheet>
           <div className="hidden md:flex items-center gap-4">
             <Button variant={"link"}>
-              <Link href="#about">About</Link>
+              <Link href="#about">Sobre</Link>
             </Button>
-            <Button variant={"link"}>Prices</Button>
-            <Button variant={"outline"}>Login</Button>
+            <Button variant={"link"}>
+              <Link href="#prices">Planos</Link>
+            </Button>
+            {/* <Button variant={"outline"}>Login</Button> */}
           </div>
         </nav>
       </header>
@@ -98,7 +96,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="container mx-auto text-center py-8 md:py-20">
+      <section
+        className="container mx-auto text-center py-8 md:py-20"
+        id="prices"
+      >
         <h2 className="text-2xl md:text-4xl font-bold">
           Preços Simples e Transparentes
         </h2>
@@ -235,7 +236,7 @@ export default function Home() {
             garantido seus estudos
           </p>
           <Button className="w-40 md:w-full max-w-sm mt-6 md:mt-10">
-            Assine agora
+            <Link href={"#prices"}>Escolher plano</Link>
           </Button>
           <p className="text-muted-foreground mt-4 text-xs">
             Comece sua assinatura agora mesmo. Cancele quando quiser.
@@ -244,7 +245,7 @@ export default function Home() {
       </section>
       <footer className="container mx-auto flex flex-col md:flex-row justify-around items-center">
         <Image src={logoImg} alt="Logo LivroSaaS" />
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-muted-foreground text-center">
           © 2025 LivroSaaS. Todos os direitos reservados. Desenvolvido por{" "}
           <Button className="p-0" variant={"link"}>
             <Link href={"https://github.com/AndrewDRichter"}>
