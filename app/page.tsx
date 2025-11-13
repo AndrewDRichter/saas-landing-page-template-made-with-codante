@@ -21,6 +21,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Link from "next/link";
+import { salvarLead } from "./actions";
+import { LeadForm } from "./components/LeadForm";
 
 export default function Home() {
   return (
@@ -66,19 +68,7 @@ export default function Home() {
           Deixe que nós façamos a curadoria para você. Assine nossa plataforma e
           receba todos os meses um ebook novo de programação.
         </p>
-        <form className="mt-10 md:mt-20">
-          <div className="flex flex-wrap gap-2 justify-center">
-            <Input
-              placeholder="Coloque seu email"
-              type="email"
-              className="max-w-sm border-gray-400 md:text-lg shadow-xl"
-            />
-            <Button className="w-full md:w-fit">Assine agora</Button>
-          </div>
-          <p className="text-xs text-muted-foreground mt-2">
-            Comece sua assinatura agora mesmo. Cancele quando quiser.
-          </p>
-        </form>
+        <LeadForm />
       </section>
       <section className="bg-white py-6 md:py-14" id="about">
         <div className="container mx-auto">
